@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'docker-slave' }
+        docker { image 'j-slave1' }
     }
 
     stages {
