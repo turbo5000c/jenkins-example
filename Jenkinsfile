@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'docker-slave' }
+    }
 
     stages {
         stage ('Compile Stage') {
