@@ -17,7 +17,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_3_9') {
-                    sh '$MVN test'
+                    sh '$MVN_CMD test'
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3_3_9') {
-                    sh '$MVN deploy'
+                    sh '$MVN_CMD deploy'
                 }
             }
         }
